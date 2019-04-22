@@ -18,4 +18,4 @@ for file in `find "/import" -name *.proto`; do
     fileName="${fileName} ${file}"
 done
 
-protoc --proto_path=/import --php_out=/output --plugin=grpc_php_plugin $fileName
+protoc --proto_path=/import --grpc_out=/output --php_out=/output --plugin=grpc_php_plugin $fileName
