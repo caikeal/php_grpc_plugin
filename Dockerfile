@@ -21,8 +21,8 @@ RUN git clone -b $(curl -L https://grpc.io/release) https://github.com/grpc/grpc
     cd grpc && \
     git submodule update --init && \
     make grpc_php_plugin && \
-    mv bins/opt/protobuf/protoc /usr/local/ && \
-    mv bins/opt/grpc_php_plugin /usr/local/ && \
+    mv bins/opt/protobuf/protoc /usr/local/bin/ && \
+    mv bins/opt/grpc_php_plugin /usr/local/bin/ && \
     cd .. && rm -rf grpc
 
 CMD [ "/php_start.sh" ]
